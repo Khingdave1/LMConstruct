@@ -21,6 +21,7 @@ html {
 }
 body {
     font-family: 'Mulish', sans-serif;
+    position: relative;
 }
 .uppercase {
     text-transform: uppercase;
@@ -94,6 +95,7 @@ body {
     background-position: center;
     background-size: cover;
     height: 100vh;
+    position: relative;
     nav {
         display: flex;
         justify-content: space-between;
@@ -134,6 +136,7 @@ body {
                 transform-origin: left;
                 transition: transform 0.2s ease-in-out;
                 &.open-menu {
+                    // display: flex;
                     transform: scaleY(1);
                 }
                 a {
@@ -175,10 +178,11 @@ body {
         }
     }
     &-hero {
-        position: relative;
-        top: 35%;
+        position: absolute;
+        top: 50%;
         left: 50%;
         transform: translate(-50%,-50%);
+        width: 100%;
         color: $white-color;
         text-align: center;
         letter-spacing: 3px;
@@ -199,7 +203,7 @@ body {
     }
     .arrow-button {
         position: absolute;
-        bottom: 0;
+        bottom: 5%;
         left: 50%;
         transform: translateX(-50%);
         :hover {
@@ -550,6 +554,7 @@ body {
 // Footer start
 footer {
     padding: 5% 8% 3% 8%;
+    // position: relative;
     @media only screen and (max-width: 660px) {
         padding-top: 8%;
     }
@@ -638,6 +643,22 @@ footer {
             @media only screen and (max-width: 590px) {
                 font-size: 10px;
             }
+        }
+    }
+    // Arrow to take you back to the beginning of the page
+    .arrow-up {
+        position: absolute;
+        bottom: 1%;
+        right: 1%;
+        border: 2px solid $primary-color;
+        padding: 10px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        img {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
         }
     }
 
